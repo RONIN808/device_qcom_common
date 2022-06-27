@@ -1218,10 +1218,9 @@ else ifeq ($(PLATFORM_VERSION), $(filter $(PLATFORM_VERSION),T 13))
   SOONG_CONFIG_vibrator_vibrator := vibratoraidlV13target
 endif
 
-# soong namespace for kernel-tests-internal
-SOONG_CONFIG_NAMESPACES += kernel_tests_internal
-SOONG_CONFIG_kernel_tests_internal += kernel_tests_internal
-
 ifeq ($(PLATFORM_VERSION), $(filter $(PLATFORM_VERSION),T 13))
+  # soong namespace for kernel-tests-internal
+  SOONG_CONFIG_NAMESPACES += kernel_tests_internal
+  SOONG_CONFIG_kernel_tests_internal += kernel_tests_internal
   SOONG_CONFIG_kernel_tests_internal_kernel_tests_internal := kernel_tests_internal_llvm_ge_13
 endif
